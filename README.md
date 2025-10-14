@@ -21,23 +21,7 @@ c. To verify the installation, run:
 npx cypress open
 
 
-2. Folder Structure 
-
-/cypress.config.js                          # Main Cypress configuration file
-/cypress
-  /e2e                                      # End to End Spec files folder containing all the e2e tests.
-  /fixtures                                 # Static data (JSON, etc.) used by tests
-    example.json
-  /support                                  # Support files loaded before each spec
-    commands.js                             # Custom commands and utility functions
-    e2e.js (or index.js)                    # Global setup / behavior before each test file
-/screenshots (generated at runtime)           :contentReference
-/ videos (generated at runtime)               :contentReference[oaicite:5]{index=5}
-/ downloads (if using downloads in tests)     :contentReference[oaicite:6]{index=6}
-
-
-
-3. Create E2E tests
+2. Create E2E tests
     a. Create the e2e tests in the e2e folder.
     b. Any common steps in the E2E test, add them to commands.js in the support folder.
 
@@ -49,10 +33,4 @@ npx cypress open
     c. To run headless execution
         i. npx cypress run
         
-
-
-
-
-
-
 4. Generate, Merge and display HTML Report using Mochaawesome
