@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-08T12:49:12.081Z",
+    "end": "2025-10-08T12:49:16.425Z",
+    "duration": 4344,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3bd53d9c-e959-47bb-bb7c-af82fd7f0b3b",
+      "title": "",
+      "fullFile": "cypress/e2e/type_AllFieldsCheck_HappyPath.cy.js",
+      "file": "cypress/e2e/type_AllFieldsCheck_HappyPath.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "029358ca-17d2-4149-8938-0067086020ea",
+          "title": "KS-TS01_Type Page All Flields Check",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "KS-TC01_Type_Email Field Check if we can enter email in the email field ",
+              "fullTitle": "KS-TS01_Type Page All Flields Check KS-TC01_Type_Email Field Check if we can enter email in the email field ",
+              "timedOut": null,
+              "duration": 913,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Get an input, type into it\ncy.get('.action-email').type('fake@email.com');\n// verify that the value has been updated\ncy.get('.action-email').should('have.value', 'fake@email.com');",
+              "err": {},
+              "uuid": "701c6f4b-bf9b-4a0b-af17-c31e1bc6bbdd",
+              "parentUUID": "029358ca-17d2-4149-8938-0067086020ea",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "KS-TC02_Type_FullName Check if we can enter the full name on the field",
+              "fullTitle": "KS-TS01_Type Page All Flields Check KS-TC02_Type_FullName Check if we can enter the full name on the field",
+              "timedOut": null,
+              "duration": 610,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Clear the full name field\ncy.get('.action-blur').clear();\ncy.get('.action-blur').type('Full Name');",
+              "err": {},
+              "uuid": "1963d189-212b-4c49-a33c-16717c9c87d5",
+              "parentUUID": "029358ca-17d2-4149-8938-0067086020ea",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "KS-TC03_Type Password in the password field",
+              "fullTitle": "KS-TS01_Type Page All Flields Check KS-TC03_Type Password in the password field",
+              "timedOut": null,
+              "duration": 560,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Type the Password in the password field\ncy.get('.action-focus').type('Password1');",
+              "err": {},
+              "uuid": "6edad1ab-15c5-49a9-b5fe-1b117f1be1e7",
+              "parentUUID": "029358ca-17d2-4149-8938-0067086020ea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "701c6f4b-bf9b-4a0b-af17-c31e1bc6bbdd",
+            "1963d189-212b-4c49-a33c-16717c9c87d5",
+            "6edad1ab-15c5-49a9-b5fe-1b117f1be1e7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2083,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}
