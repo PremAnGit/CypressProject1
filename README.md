@@ -27,10 +27,32 @@ npx cypress open
 
 3. Execute Automation tests
     Letting Test run openly.
-    a. npx cypress open
-    b. on npm script you can add it as : 
+    a. npx cypress open( this will by default will open chrome driver).
+    b. for Edge user You can use the 
+       
+         npx cypress run --browser edge
+
+    c. on npm script you can add it as : 
     "scripts": {"cy:open": "cypress open"}
-    c. To run headless execution
+    
+    d. To run headless execution
         i. npx cypress run
         
 4. Generate, Merge and display HTML Report using Mochaawesome
+
+     a. Package dependencies for mochawesome are 
+        - mochawsome, 
+        - mochawesome-merge, 
+        - mochawsome-report-generator (aka marge)
+
+    and command to install it
+    npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
+
+    b. Once test run and jSON files are generated, Merge the JSON files into a single JSON file
+    npx mochawesome-merge cypress/reports/mochawesome-report/*.json > merged-report.json
+
+    c. Generate HTML report from the merged JSON using margee:
+    npx marge merged-report.json --reportDir final-report-directory
+
+    d. 
+
