@@ -46,13 +46,17 @@ npx cypress open
         - mochawsome-report-generator (aka marge)
 
     and command to install it
+
     npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
 
     b. Once test run and jSON files are generated, Merge the JSON files into a single JSON file
-    npx mochawesome-merge cypress/reports/mochawesome-report/*.json > merged-report.json
+
+    npx mochawesome-merge cypress/reports/*.json >cypress/reports/mocha/merged.json
 
     c. Generate HTML report from the merged JSON using margee:
-    npx marge merged-report.json --reportDir final-report-directory
 
-    d. 
+    npx marge cypress/reports/mocha/merged.json --reportDir cypress/reports/mocha 
+
+    d. You can also run the full Mochaawsome report from the package with the following script 
+    npm run report:full
 
